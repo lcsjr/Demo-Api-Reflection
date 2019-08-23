@@ -18,7 +18,6 @@ public class Teste {
 	}
 
 	public static void main(String[] args) {
-
 		List<String> nomes = pessoas.stream().map( Pessoa::getNome).collect(Collectors.toList());
 		nomes.forEach(System.out::println);
 		nomes.add(0, "Luiz Santos");
@@ -30,12 +29,11 @@ public class Teste {
 @Getter
 class Pessoa {
 	
-	String nome;
-	int age;
+	private String nome;
+	private int age;
 
 	public Pessoa(String nome, int age) {
 		this.nome = nome;
 		this.age = age;
 	}
-
 }
